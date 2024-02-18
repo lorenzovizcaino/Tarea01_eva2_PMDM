@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tarea01_eva2_PMDM</string>
     <string name="title_activity_main_ej2_column">MainActivityEj2Column</string>
@@ -6,15 +7,15 @@
     <string name="title_activity_main_ej1_tabla">MainActivityEj1Tabla</string>
     <string name="title_activity_main_ej5_column">MainActivityEj5Column</string>
     <string name="title_activity_main_ej6_mix">MainActivityEj6Mix</string>
-    <string name="texto1">Texto1</string>
-    <string name="texto2">Texto2</string>
-    <string name="texto3">Texto3</string>
+    <string name="texto1">Text1</string>
+    <string name="texto2">Text2</string>
+    <string name="texto3">Text3</string>
     <string name="jetpack_compose">JetPack Compose</string>
-    <string name="hola_texto_hardcodeado">Hola, Texto Hardcodeado</string>
-    <string name="hola">Hola</string>
-    <string name="otro_texto_hardcodeado">otro texto hardcodeado</string>
+    <string name="hola_texto_hardcodeado">Hi, Text Hardcodeado</string>
+    <string name="hola">Hi</string>
+    <string name="otro_texto_hardcodeado">any text hardcodeado</string>
     <string name="teis">Teis</string>
-    <string name="ej1_tabla">Ej1 Tabla</string>
+    <string name="ej1_tabla">Ej1 Table</string>
     <string name="ej2_column">Ej2 Column</string>
     <string name="ej3_column">Ej3 Column</string>
     <string name="ej4_row">Ej4 Row</string>

@@ -9,7 +9,13 @@ import com.antonio.tarea01_eva2_pmdm.ui.screens.CalculadoraOperaciones
 import com.antonio.tarea01_eva2_pmdm.ui.screens.CalculadoraSumas
 import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeBotones1
 import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeBotones2
+import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeColumn1
+import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeColumn2
+import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeColumnInBox
+import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeMix
+import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeRow1
 import com.antonio.tarea01_eva2_pmdm.ui.screens.Menu
+import com.antonio.tarea01_eva2_pmdm.ui.screens.TablaMultiplicar
 
 @Composable
 fun Navigation() {
@@ -17,6 +23,25 @@ fun Navigation() {
     NavHost(navController, startDestination = Screens.Menu.route) {
         //pantalla principal con la navegación
         composable(route = Screens.Menu.route) { Menu(navController) }//Nombre del fichero .kt al que navegar
+
+        composable(route = Screens.TablaMultiplicar.route) {
+            TablaMultiplicar() //Nombre de la función composable a la que navegar
+        }
+        composable(route = Screens.ComposeColumn1.route) {
+            ComposeColumn1() //Nombre de la función composable a la que navegar
+        }
+        composable(route = Screens.ComposeColumn2.route) {
+            ComposeColumn2() //Nombre de la función composable a la que navegar
+        }
+        composable(route = Screens.ComposeRow1.route) {
+            ComposeRow1() //Nombre de la función composable a la que navegar
+        }
+        composable(route = Screens.ComposeColumnInBox.route) {
+            ComposeColumnInBox() //Nombre de la función composable a la que navegar
+        }
+        composable(route = Screens.ComposeMix.route) {
+            ComposeMix() //Nombre de la función composable a la que navegar
+        }
         composable(route = Screens.ComposeBotones1.route) {
             ComposeBotones1() //Nombre de la función composable a la que navegar
         }
