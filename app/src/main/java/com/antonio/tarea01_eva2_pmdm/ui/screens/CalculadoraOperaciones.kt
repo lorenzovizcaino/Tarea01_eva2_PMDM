@@ -1,7 +1,6 @@
 package com.antonio.tarea01_eva2_pmdm.ui.screens
 
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -39,6 +38,7 @@ fun CalculadoraOperaciones() {
     var num2 = 0.0
     var resul=0.0
     val formato = DecimalFormat("#.##")
+    var lista= listOf<String>("Suma","Resta","Multiplicacion","Division")
 
     try {
         num1 = number1.toDouble()
@@ -58,7 +58,8 @@ fun CalculadoraOperaciones() {
     ) {
         myTextField(number1, { number1 = it }, "Numero 1")
         myTextField(number2, { number2 = it }, "Numero 2")
-        operacion=MyRadioButton()
+       // operacion=MyRadioButton()
+        operacion=MyRadioButton2(lista)
 
         Text(
             text = "Resultado = $resultado", color = color, fontSize = 36.sp
@@ -94,7 +95,9 @@ fun CalculadoraOperaciones() {
 @Composable
 fun MyRadioButton(): String {
     var operacion by rememberSaveable {mutableStateOf("Suma")}
-    Column (modifier=Modifier.fillMaxWidth().padding(start=60.dp),horizontalAlignment = Alignment.Start){
+    Column (modifier= Modifier
+        .fillMaxWidth()
+        .padding(start = 60.dp),horizontalAlignment = Alignment.Start){
         Row() {
             RadioButton(selected = operacion == "Suma", onClick = { operacion="Suma" })
             Text(text = "Suma", modifier = Modifier.padding(top = 12.dp))
@@ -119,6 +122,30 @@ fun MyRadioButton(): String {
     }
     return operacion
 }
+
+
+@Composable
+fun MyRadioButton2(lista: List<String>): String {
+    var operacion by rememberSaveable {mutableStateOf("")}
+
+
+    Column (modifier= Modifier
+        .fillMaxWidth()
+        .padding(start = 60.dp),horizontalAlignment = Alignment.Start){
+        for (i in 0..lista.size-1){
+            Row() {
+                RadioButton(selected = operacion == lista[i], onClick = { operacion=lista[i] })
+                Text(text = lista[i], modifier = Modifier.padding(top = 12.dp))
+            }
+
+    }
+    }
+
+    return operacion
+}
+
+
+
 
 
 
