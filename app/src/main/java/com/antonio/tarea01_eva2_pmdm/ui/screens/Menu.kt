@@ -65,8 +65,12 @@ fun Menu(navController: NavController){
             Text(text = "Calculadora Sumas")
         }
 
-        Button(onClick = { navController.navigate(route = Screens.CalculadoraOperaciones.route) }) {
+        Button(onClick = { navController.navigate(route = Screens.Calculadora.route) }) {
             Text(text = "Calculadora Operaciones")
+        }
+
+        Button(onClick = { navController.navigate(route = Screens.ContadorST.route) }) {
+            Text(text = "Contador State Hosting")
         }
 
     }

@@ -5,7 +5,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.antonio.tarea01_eva2_pmdm.ui.screens.BotonesConIcono
-import com.antonio.tarea01_eva2_pmdm.ui.screens.CalculadoraOperaciones
+import com.antonio.tarea01_eva2_pmdm.ui.screens.Calculadora
+
 import com.antonio.tarea01_eva2_pmdm.ui.screens.CalculadoraSumas
 import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeBotones1
 import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeBotones2
@@ -14,6 +15,7 @@ import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeColumn2
 import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeColumnInBox
 import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeMix
 import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeRow1
+import com.antonio.tarea01_eva2_pmdm.ui.screens.ContadorST
 import com.antonio.tarea01_eva2_pmdm.ui.screens.Menu
 import com.antonio.tarea01_eva2_pmdm.ui.screens.TablaMultiplicar
 
@@ -54,8 +56,11 @@ fun Navigation() {
         composable(route = Screens.CalculadoraSumas.route) {
             CalculadoraSumas() //Nombre de la función composable a la que navegar
         }
-        composable(route = Screens.CalculadoraOperaciones.route) {
-            CalculadoraOperaciones() //Nombre de la función composable a la que navegar
+        composable(route = Screens.Calculadora.route) {
+            Calculadora() //Nombre de la función composable a la que navegar
+        }
+        composable(route = Screens.ContadorST.route) {
+            ContadorST() //Nombre de la función composable a la que navegar
         }
 
     }
