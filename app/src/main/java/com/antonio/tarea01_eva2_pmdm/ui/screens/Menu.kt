@@ -80,6 +80,7 @@ fun Menu(navController: NavController){
 fun MyButton(function: () -> Unit, texto: String, color: Color) {
     Button(onClick = function,colors = ButtonDefaults.buttonColors(color)) {
         Text(text =texto )
+        //cc
     }
 
 }
