@@ -29,17 +29,17 @@ fun Menu(navController: NavController){
             Text(text = "Tabla Multiplicar")
         }
 
-        Button(onClick = { navController.navigate(route = Screens.ComposeColumn1.route) }) {
-            Text(text = "Ejemplo Columnas 1")
-        }
+
+
+        MyButton({ navController.navigate(route = Screens.ComposeColumn1.route) }, "Ejemplo Columnas 1",Color.Red)
 
         Button(onClick = { navController.navigate(route = Screens.ComposeColumn2.route) }) {
             Text(text = "Ejemplo Columnas 2")
         }
 
-        Button(onClick = { navController.navigate(route = Screens.ComposeRow1.route) }) {
-            Text(text = "Ejemplo filas 1")
-        }
+
+
+        MyButton(function = { navController.navigate(route = Screens.ComposeRow1.route) }, texto ="Ejemplo filas 1" , color =Color.Red )
 
         Button(onClick = { navController.navigate(route = Screens.ComposeColumnInBox.route) }) {
             Text(text = "Ejemplo Column in Box")
@@ -74,4 +74,12 @@ fun Menu(navController: NavController){
         }
 
     }
+}
+
+@Composable
+fun MyButton(function: () -> Unit, texto: String, color: Color) {
+    Button(onClick = function,colors = ButtonDefaults.buttonColors(color)) {
+        Text(text =texto )
+    }
+
 }
