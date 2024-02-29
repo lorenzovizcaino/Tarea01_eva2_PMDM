@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun MyButton(function: () -> Unit, texto: String, color: Color = Color.Blue, forma: Shape = RectangleShape, elevacion: Dp =0.dp, colorBorde: Color = Color.Blue, grosorBorde: Dp =0.dp) {
+fun MyButton(function: () -> Unit, texto: String, color: Color = Color.Blue, forma: Shape = RectangleShape, elevacion: Dp =0.dp, colorBorde: Color = Color.Blue, grosorBorde: Dp =0.dp, colorTexto: Color=Color.Black) {
     Button(
         onClick = function,
         colors = ButtonDefaults.buttonColors(color),
@@ -23,7 +23,7 @@ fun MyButton(function: () -> Unit, texto: String, color: Color = Color.Blue, for
 
 
     {
-        Text(text = texto)
+        Text(text = texto, color = colorTexto)
 
     }
 }

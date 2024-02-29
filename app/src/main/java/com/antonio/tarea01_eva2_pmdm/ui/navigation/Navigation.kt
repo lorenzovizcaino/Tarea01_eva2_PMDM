@@ -16,6 +16,7 @@ import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeColumnInBox
 import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeMix
 import com.antonio.tarea01_eva2_pmdm.ui.screens.ComposeRow1
 import com.antonio.tarea01_eva2_pmdm.ui.screens.ContadorST
+import com.antonio.tarea01_eva2_pmdm.ui.screens.MainScreenDado
 import com.antonio.tarea01_eva2_pmdm.ui.screens.Menu
 import com.antonio.tarea01_eva2_pmdm.ui.screens.TablaMultiplicar
 
@@ -61,6 +62,9 @@ fun Navigation() {
         }
         composable(route = Screens.ContadorST.route) {
             ContadorST() //Nombre de la función composable a la que navegar
+        }
+        composable(route = Screens.MainScreenDado.route) {
+            MainScreenDado() //Nombre de la función composable a la que navegar
         }
 
     }
