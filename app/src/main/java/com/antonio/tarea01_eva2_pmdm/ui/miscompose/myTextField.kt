@@ -1,4 +1,4 @@
-package com.antonio.tarea01_eva2_pmdm.ui.screens
+package com.antonio.tarea01_eva2_pmdm.ui.miscompose
 
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api

@@ -21,4 +21,16 @@
     <string name="ej4_row">Ej4 Row</string>
     <string name="ej5_column">Ej5 Column</string>
     <string name="ej6_mix">Ej6 Mix</string>
+    <string name="tabla_multiplicar">Multiplication table</string>
+    <string name="ejemplo_columnas_1">Example Columns 1</string>
+    <string name="ejemplo_columnas_2">Example Columns 2</string>
+    <string name="ejemplo_filas_1">Example rows 1</string>
+    <string name="ejemplo_column_in_box">Example Column in Box</string>
+    <string name="ejemplo_compose_mix">Example Compose Mix</string>
+    <string name="ejemplo_botones_1">Example Buttons 1</string>
+    <string name="ejemplo_botones_2">Example Buttons 2</string>
+    <string name="ejemplo_botones_con_icono">Example Buttons with Icon</string>
+    <string name="calculadora_sumas">Sums Calculator</string>
+    <string name="calculadora_operaciones">Operations Calculator</string>
+    <string name="dado_livedata">LiveData dice</string>
 </resources>

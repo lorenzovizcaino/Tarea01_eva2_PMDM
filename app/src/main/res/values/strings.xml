@@ -20,4 +20,17 @@
     <string name="ej4_row">Ej4 Row</string>
     <string name="ej5_column">Ej5 Column</string>
     <string name="ej6_mix">Ej6 Mix</string>
+    <string name="tabla_multiplicar">Tabla Multiplicar</string>
+    <string name="ejemplo_columnas_1">Ejemplo Columnas 1</string>
+    <string name="ejemplo_columnas_2">Ejemplo Columnas 2</string>
+    <string name="ejemplo_filas_1">Ejemplo filas 1</string>
+    <string name="ejemplo_column_in_box">Ejemplo Column in Box</string>
+    <string name="ejemplo_compose_mix">Ejemplo Compose Mix</string>
+    <string name="ejemplo_botones_1">Ejemplo Botones 1</string>
+    <string name="ejemplo_botones_2">Ejemplo Botones 2</string>
+    <string name="ejemplo_botones_con_icono">Ejemplo Botones con Icono</string>
+    <string name="calculadora_sumas">Calculadora Sumas</string>
+    <string name="calculadora_operaciones">Calculadora Operaciones</string>
+    <string name="contador_state_hosting">Contador State Hosting</string>
+    <string name="dado_livedata">Dado LiveData</string>
 </resources>

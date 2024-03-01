@@ -16,6 +16,6 @@ sealed class Screens(val route:String){
     object CalculadoraSumas: Screens("ejCalculadoraSumas")//info a aparecer en pantalla
     object Calculadora: Screens("ejCalculadoraOperaciones")//info a aparecer en pantalla
     object ContadorST: Screens("ejContadorStateHosting")//info a aparecer en pantalla
-    object MainScreenDado: Screens("ejContadorStateHosting")//info a aparecer en pantalla
+    object MainScreenDado: Screens("ejMainScreenDado")//info a aparecer en pantalla
 
 }

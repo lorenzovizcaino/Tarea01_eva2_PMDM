@@ -10,9 +10,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.antonio.tarea01_eva2_pmdm.ui.miscompose.myTextField
 
 @Preview
 @Composable
@@ -23,6 +25,7 @@ fun Calculadora() {
 @Composable
 fun Calculadora(viewModel: CalculadoraViewModel){
     var lista= listOf<String>("Suma","Resta","Multiplicacion","Division")
+    var context= LocalContext.current
     Column(
         modifier = Modifier.padding(top = 50.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -38,7 +41,14 @@ fun Calculadora(viewModel: CalculadoraViewModel){
         )
 
 
-        Button(onClick = {viewModel.ObtenerResultado()}) {
+        Button(onClick = {
+            try{
+            viewModel.ObtenerResultado()
+            }catch (e:NumberFormatException){
+                showToast2("Debe de Introducir Operandos",context)
+            }
+
+        }) {
             Text(text = "Calcular")
 
 

@@ -6,10 +6,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.ViewModel
+import com.antonio.tarea01_eva2_pmdm.ui.miscompose.showToast
 import java.text.DecimalFormat
 
 class CalculadoraViewModel:ViewModel() {
+
     var number1 by mutableStateOf("")
         private set
     var number2 by mutableStateOf("")
@@ -40,25 +43,31 @@ class CalculadoraViewModel:ViewModel() {
     }
 
     fun ObtenerResultado(){
-        var resul=0.0
-        when{
-
-
-            operacion =="Suma" -> resul=(number1.toDouble()+number2.toDouble())
-            operacion =="Resta" -> resul=(number1.toDouble()-number2.toDouble())
-            operacion =="Multiplicacion" -> resul=(number1.toDouble()*number2.toDouble())
-            operacion =="Division" -> resul=(number1.toDouble()/number2.toDouble())
-        }
-        resultado=formato.format(resul)
 
 
 
 
-        when {
-            resultado.toDouble() > 25 -> color = Color.Cyan
-            resultado.toDouble() < 25 -> color = Color.Blue
-            else -> color = Color.Red
-        }
+            var resul = 0.0
+            when {
+
+
+                operacion == "Suma" -> resul = (number1.toDouble() + number2.toDouble())
+                operacion == "Resta" -> resul = (number1.toDouble() - number2.toDouble())
+                operacion == "Multiplicacion" -> resul = (number1.toDouble() * number2.toDouble())
+                operacion == "Division" -> resul = (number1.toDouble() / number2.toDouble())
+            }
+            resultado = formato.format(resul)
+
+
+
+
+            when {
+                resultado.toDouble() > 25 -> color = Color.Cyan
+                resultado.toDouble() < 25 -> color = Color.Blue
+                else -> color = Color.Red
+            }
+
+
 
     }
 

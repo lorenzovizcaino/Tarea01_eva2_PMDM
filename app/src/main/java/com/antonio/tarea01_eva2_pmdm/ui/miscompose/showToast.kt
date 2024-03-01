@@ -1,4 +1,4 @@
-package com.antonio.tarea01_eva2_pmdm.ui.screens
+package com.antonio.tarea01_eva2_pmdm.ui.miscompose
 
 import android.content.Context
 import android.widget.Toast

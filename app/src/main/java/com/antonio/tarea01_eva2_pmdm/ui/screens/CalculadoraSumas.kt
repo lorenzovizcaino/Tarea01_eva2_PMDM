@@ -17,6 +17,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.antonio.tarea01_eva2_pmdm.ui.miscompose.myTextField
+import com.antonio.tarea01_eva2_pmdm.ui.miscompose.showToast
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -26,7 +28,8 @@ fun CalculadoraSumas() {
     var number1 by rememberSaveable { mutableStateOf("") }
     var number2 by rememberSaveable { mutableStateOf("") }
     var suma by rememberSaveable { mutableStateOf("0.0") }
-    var color by rememberSaveable { mutableStateOf(Color.Black) }
+    var color by remember { mutableStateOf(Color.Black) }
+
     var num1 = 0.0
     var num2 = 0.0
 
