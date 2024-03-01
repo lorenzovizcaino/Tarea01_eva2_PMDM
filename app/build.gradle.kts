@@ -77,6 +77,13 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 
+    /* Coil */
+    implementation("io.coil-kt:coil-compose:2.2.2")
+    implementation("org.chromium.net:cronet-embedded:119.6045.31")
+
+    /* Librería para tener más iconos */
+    implementation ("androidx.compose.material:material-icons-extended:1.6.2")
+
 
 
 

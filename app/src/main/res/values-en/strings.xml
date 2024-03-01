@@ -33,4 +33,5 @@
     <string name="calculadora_sumas">Sums Calculator</string>
     <string name="calculadora_operaciones">Operations Calculator</string>
     <string name="dado_livedata">LiveData dice</string>
+
 </resources>

@@ -160,6 +160,7 @@ fun Botones(padding: PaddingValues, navController: NavController) {
 
         MyButton(
             { navController.navigate(route = Screens.ComposeRow1.route) },
+
             stringResource(R.string.ejemplo_filas_1),
             color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
             forma = CircleShape,
