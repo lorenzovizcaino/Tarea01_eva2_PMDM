@@ -116,6 +116,21 @@ fun MyTopBar(
 @Composable
 fun Botones(padding: PaddingValues, navController: NavController) {
     val scrollState = rememberScrollState()
+    val lista: List <Botones> =listOf(
+        Botones (stringResource(R.string.tabla_multiplicar)) { navController -> navController.navigate(route = Screens.TablaMultiplicar.route) },
+        Botones (stringResource(R.string.ejemplo_columnas_1)) { navController -> navController.navigate(route = Screens.ComposeColumn1.route) },
+        Botones (stringResource(R.string.ejemplo_columnas_2)) { navController -> navController.navigate(route = Screens.ComposeColumn2.route) },
+        Botones (stringResource(R.string.ejemplo_filas_1)) { navController -> navController.navigate(route = Screens.ComposeRow1.route) },
+        Botones (stringResource(R.string.ejemplo_column_in_box)) { navController -> navController.navigate(route = Screens.ComposeColumnInBox.route) },
+        Botones (stringResource(R.string.ejemplo_compose_mix)) { navController -> navController.navigate(route = Screens.ComposeMix.route) },
+        Botones (stringResource(R.string.ejemplo_botones_1)) { navController -> navController.navigate(route = Screens.ComposeBotones1.route) },
+        Botones (stringResource(R.string.ejemplo_botones_2)) { navController -> navController.navigate(route = Screens.ComposeBotones2.route) },
+        Botones (stringResource(R.string.ejemplo_botones_con_icono)) { navController -> navController.navigate(route = Screens.BotonesConIcono.route) },
+        Botones (stringResource(R.string.calculadora_sumas)) { navController -> navController.navigate(route = Screens.CalculadoraSumas.route) },
+        Botones (stringResource(R.string.calculadora_operaciones)) { navController -> navController.navigate(route = Screens.Calculadora.route) },
+        Botones (stringResource(R.string.contador_state_hosting)) { navController -> navController.navigate(route = Screens.ContadorST.route) },
+        Botones (stringResource(R.string.dado_livedata)) { navController -> navController.navigate(route = Screens.MainScreenDado.route) },
+    )
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -125,152 +140,19 @@ fun Botones(padding: PaddingValues, navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        EspacioH(espacio = 20)
+        lista.forEach{item->
+            MyButton(
+                function = {item.onClick(navController)},
+                texto = item.nombre,
+                color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
+                elevacion = 12.dp,
+                colorBorde=Color.Yellow,
+                grosorBorde=3.dp,
+                tamanhoTexto = 20.sp)
 
-        MyButton(
-            { navController.navigate(route = Screens.TablaMultiplicar.route) },
-            stringResource(R.string.tabla_multiplicar),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
+            EspacioH(espacio = 20)
 
-        MyButton(
-            { navController.navigate(route = Screens.ComposeColumn1.route) },
-            stringResource(R.string.ejemplo_columnas_1),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-        MyButton(
-            { navController.navigate(route = Screens.ComposeColumn2.route) },
-            stringResource(R.string.ejemplo_columnas_2),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-
-        MyButton(
-            { navController.navigate(route = Screens.ComposeRow1.route) },
-
-            stringResource(R.string.ejemplo_filas_1),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            forma = CircleShape,
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-        MyButton(
-            { navController.navigate(route = Screens.ComposeColumnInBox.route) },
-            stringResource(R.string.ejemplo_column_in_box),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            forma = CircleShape,
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-        MyButton(
-            { navController.navigate(route = Screens.ComposeMix.route) },
-            stringResource(R.string.ejemplo_compose_mix),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            forma = CircleShape,
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-        MyButton(
-            { navController.navigate(route = Screens.ComposeBotones1.route) },
-            stringResource(R.string.ejemplo_botones_1),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-        MyButton(
-            { navController.navigate(route = Screens.ComposeBotones2.route) },
-            stringResource(R.string.ejemplo_botones_2),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-        MyButton(
-            { navController.navigate(route = Screens.BotonesConIcono.route) },
-            stringResource(R.string.ejemplo_botones_con_icono),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-        MyButton(
-            { navController.navigate(route = Screens.CalculadoraSumas.route) },
-            stringResource(R.string.calculadora_sumas),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            forma = CircleShape,
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-        MyButton(
-            { navController.navigate(route = Screens.Calculadora.route) },
-            stringResource(R.string.calculadora_operaciones),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            forma = CircleShape,
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-        MyButton(
-            { navController.navigate(route = Screens.ContadorST.route) },
-            stringResource(R.string.contador_state_hosting),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            forma = CircleShape,
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-        MyButton(
-            { navController.navigate(route = Screens.MainScreenDado.route) },
-            stringResource(R.string.dado_livedata),
-            color=Color(Random.nextLong(0xFF000000, 0xFFFFFFFF)),
-            forma = CircleShape,
-            elevacion = 12.dp,
-            colorBorde=Color.Yellow,
-            grosorBorde=3.dp,
-            tamanhoTexto = 20.sp)
-        EspacioH(espacio = 20)
-
-
-
-
-
-
+        }
 
 
 
