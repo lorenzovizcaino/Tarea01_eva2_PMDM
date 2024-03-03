@@ -43,33 +43,18 @@ class CalculadoraViewModel:ViewModel() {
     }
 
     fun ObtenerResultado(){
-
-
-
-
             var resul = 0.0
             when {
-
-
                 operacion == "Suma" -> resul = (number1.toDouble() + number2.toDouble())
                 operacion == "Resta" -> resul = (number1.toDouble() - number2.toDouble())
                 operacion == "Multiplicacion" -> resul = (number1.toDouble() * number2.toDouble())
                 operacion == "Division" -> resul = (number1.toDouble() / number2.toDouble())
             }
             resultado = formato.format(resul)
-
-
-
-
             when {
                 resultado.toDouble() > 25 -> color = Color.Cyan
                 resultado.toDouble() < 25 -> color = Color.Blue
                 else -> color = Color.Red
             }
-
-
-
     }
-
-
 }

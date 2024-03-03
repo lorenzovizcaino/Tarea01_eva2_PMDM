@@ -61,13 +61,14 @@ fun MyRadioButton3(lista: List<String>, viewModel: CalculadoraViewModel) {
     Column (modifier= Modifier
         .fillMaxWidth()
         .padding(start = 60.dp),horizontalAlignment = Alignment.Start){
-        for (i in 0..lista.size-1){
-            Row() {
-                RadioButton(selected = viewModel.operacion == lista[i], onClick = { viewModel.ObtenerOperacion(lista[i]) })
-                Text(text = lista[i], modifier = Modifier.padding(top = 12.dp))
-            }
 
+        lista.forEach { item ->
+            Row() {
+                RadioButton(selected = viewModel.operacion == item, onClick = { viewModel.ObtenerOperacion(item) })
+                Text(text = item, modifier = Modifier.padding(top = 12.dp))
+            }
         }
+
     }
 }
 
